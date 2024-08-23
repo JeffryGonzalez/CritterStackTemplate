@@ -1,0 +1,29 @@
+﻿services:
+  db:
+    image: postgres:16.2-bullseye
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: user
+      POSTGRES_DB: db
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./db/:/docker-entrypoint-initdb.d/
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8090:8080"
+    environment:
+      ADMINER_DESIGN: dracula
+  dashboard:
+    image: mcr.microsoft.com/dotnet/aspire-dashboard
+    ports:
+      - "18888:18888"
+      - "4317:18889"
+    
+volumes:
+  db_data:

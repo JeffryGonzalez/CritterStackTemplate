@@ -1,0 +1,12 @@
+@CritterStack_HostAddress = http://localhost:5123
+
+POST {{CritterStack_HostAddress}}/api/todos
+Content-Type: application/json
+
+{
+  "description": "Learn Me Some Pizza"
+}
+
+###
+
+GET {{CritterStack_HostAddress}}/api/todos/
