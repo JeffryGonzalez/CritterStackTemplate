@@ -12,10 +12,10 @@ using OpenTelemetry.Trace;
 
 namespace CritterStack;
 
-public static class CritterStackExtensions
+public static class JasperFxExtensions
 {
     private static string _serviceName = null!;
-    public static WebApplicationBuilder UseCritterStackWithReasonableDefaults(this WebApplicationBuilder builder, string connectionStringKey = "CritterStack")
+    public static WebApplicationBuilder UseJasperFxStackWithReasonableDefaults(this WebApplicationBuilder builder, string connectionStringKey = "CritterStack")
     {
         builder.Host.ApplyOaktonExtensions();
  
