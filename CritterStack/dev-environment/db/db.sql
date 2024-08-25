@@ -1,2 +1,2 @@
-create database critterstack
+create database critterstackdb
        
