@@ -2,6 +2,8 @@
 
 The configuration story for the Critter Stack is exemplary. It has every knob and dial a kid could want. However, it is a bit overwhelming in the "file->new project" story for newer developers getting started. 
 
+
+
 ## Goal
 
 I'd love to have a project template I could install for students in my class getting started with this. It might also be useful for others. So, ultimately something like:
@@ -26,6 +28,8 @@ And then, after the app is built,
 app.MapWolverineEndpoint();
 await app.RunOaktonCommands(args);
 ```
+
+I don't want any kind of "reference app", so the `Todos` stuff will go before I make this a template.
 
 Some of the things in the extension method:
 
@@ -74,4 +78,6 @@ docker logs aspire-dashboard | grep "Login to the dashboard"
 Find the line with the login url (like `http://0.0.0.0:188888/login?t=blahblahblah`) and use that to login and authenticate against the dashboard.
 
 **Note**: Supposedly you can run the dashboard without needing that, but I was getting encryption errors.
+
+**Note**: `appsettings.Development.json` has a connection string set to the default database, and the `OTEL_**` environment variables needed, including the service name. The `OTEL_SERVICE_NAME` has to match the application name for the dashboard not to be all stupid about it.
 
