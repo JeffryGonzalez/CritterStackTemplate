@@ -14,7 +14,7 @@ namespace CritterStack;
 
 public static class CritterStackExtensions
 {
-    private static WolverineOptions _options = null!;
+    private static string _serviceName = null!;
     public static WebApplicationBuilder UseCritterStackWithReasonableDefaults(this WebApplicationBuilder builder, string connectionStringKey = "CritterStack")
     {
         builder.Host.ApplyOaktonExtensions();
@@ -30,11 +30,13 @@ public static class CritterStackExtensions
         }).UseLightweightSessions().IntegrateWithWolverine();
         builder.Host.UseWolverine(opts =>
         {
-            _options = opts;
+            
             opts.Policies.LogMessageStarting(LogLevel.Debug);
             opts.Policies.UseDurableInboxOnAllListeners();
             opts.Policies.UseDurableOutboxOnAllSendingEndpoints();
             opts.Policies.AutoApplyTransactions();
+
+            _serviceName = opts.ServiceName;
         }).UseResourceSetupOnStartupInDevelopment();
         builder.Services.ConfigureHttpClientDefaults(http => { http.AddStandardResilienceHandler(); });
         builder.ConfigureOpenTelemetry();
@@ -58,7 +60,7 @@ public static class CritterStackExtensions
             {
                 metrics.AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation().AddRuntimeInstrumentation()
-                    .AddMeter("EventPublisher").AddMeter("Marten").AddMeter($"Wolverine:{_options.ServiceName}");
+                    .AddMeter("EventPublisher").AddMeter("Marten").AddMeter($"Wolverine:{_serviceName}");
 
             });
         builder.AddOpenTelemetryExporters();
