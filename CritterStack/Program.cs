@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.UseCritterStack();
+builder.UseCritterStackWithReasonableDefaults();
 
 var app = builder.Build();
 

@@ -19,8 +19,12 @@
       - "8090:8080"
     environment:
       ADMINER_DESIGN: dracula
+
   dashboard:
     image: mcr.microsoft.com/dotnet/aspire-dashboard
+    container_name: aspire-dashboard
+    environment:
+      DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS: false
     ports:
       - "18888:18888"
       - "4317:18889"
