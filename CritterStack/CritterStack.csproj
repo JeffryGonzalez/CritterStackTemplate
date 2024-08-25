@@ -9,6 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="Marten.AspNetCore" Version="7.26.3" />
+        <PackageReference Include="Marten.CommandLine" Version="7.26.3" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8"/>
         <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="8.8.0" />
         <PackageReference Include="Npgsql.OpenTelemetry" Version="8.0.3" />

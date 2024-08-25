@@ -1,3 +1,4 @@
+using JasperFx.CodeGeneration;
 using Marten;
 using Marten.Services;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -9,6 +10,7 @@ using Oakton.Resources;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
+using Weasel.Core;
 
 namespace CritterStack;
 
@@ -27,6 +29,9 @@ public static class JasperFxExtensions
             config.OpenTelemetry.TrackConnections = TrackLevel.Verbose;
             config.OpenTelemetry.TrackEventCounters();
             config.Connection(connectionString);
+            config.AutoCreateSchemaObjects = builder.Environment.IsDevelopment() ?
+                AutoCreate.All 
+                : AutoCreate.None; // see https://martendb.io/schema/migrations.html#development-time-with-auto-create-mode
         }).UseLightweightSessions().IntegrateWithWolverine();
         builder.Host.UseWolverine(opts =>
         {
@@ -35,7 +40,9 @@ public static class JasperFxExtensions
             opts.Policies.UseDurableInboxOnAllListeners();
             opts.Policies.UseDurableOutboxOnAllSendingEndpoints();
             opts.Policies.AutoApplyTransactions();
-
+            opts.CodeGeneration.TypeLoadMode = builder.Environment.IsDevelopment() ? 
+                TypeLoadMode.Dynamic // Can change to TypeLoadMode.Auto if devex gets slow, see https://wolverinefx.io/guide/codegen.html#working-with-code-generation
+                : TypeLoadMode.Static;
             _serviceName = opts.ServiceName;
         }).UseResourceSetupOnStartupInDevelopment();
         builder.Services.ConfigureHttpClientDefaults(http => { http.AddStandardResilienceHandler(); });

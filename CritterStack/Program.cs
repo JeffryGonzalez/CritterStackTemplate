@@ -4,11 +4,11 @@ using Wolverine.Http;
 
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.UseJasperFxStackWithReasonableDefaults();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.UseJasperFxStackWithReasonableDefaults();
+
 
 var app = builder.Build();
 
