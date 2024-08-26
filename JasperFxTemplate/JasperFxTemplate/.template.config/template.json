@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Jeff Gonzalez",
+  "classifications": [
+    "Common",
+    "Api",
+    "JasperFx"
+  ],
+  "identity": "JeffryGonzalez.CritterStackWebApi",
+  "name": "JasperFx Full Stack Web API",
+  "shortName": "critterapi",
+  "preferNameDirectory": true,
+  "sourceName": "JasperFxTemplate",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {
+    "databaseName": {
+      "type": "parameter",
+      "description": "Name of the database to connect to",
+      "defaultValue": "critterstackdb",
+      "replaces": "critterstackdb"
+    },
+    "postgresPort": {
+      "type": "parameter",
+      "description": "Port to expose Postgres from Docker Compose",
+      "defaultValue": "5432",
+      "replaces": "PG_PORT"
+    },
+    "adminer": {
+      "type": "parameter",
+      "description": "Add Adminer to Docker Compose",
+      "dataType": "bool",
+      "defaultValue": "true"
+    },
+    "dashboard": {
+      "type": "parameter",
+      "description": "Add the Aspire Dashboard to the Docker Compose",
+      "dataType": "bool",
+      "defaultValue": "true"
+    },
+    "compose": {
+      "type": "parameter",
+      "description": "Create a Docker Compose File",
+      "dataType": "bool",
+      "defaultValue": "true"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!compose)",
+          "exclude": [
+            "dev-environment/docker-compose.yml",
+            "dev-environment/db/db.sql",
+            "dev-environment/db/",
+            "dev-environment"
+          ]
+        }
+      ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "path": "JasperFxTemplate.csproj"
+    }
+  ],
+  "postActions": [
+    {
+      "manualInstructions": [
+        {
+          "text": "Run `dotnet restore`"
+        }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}
