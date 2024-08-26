@@ -2,6 +2,59 @@
 
 The configuration story for the Critter Stack is exemplary. It has every knob and dial a kid could want. However, it is a bit overwhelming in the "file->new project" story for newer developers getting started. 
 
+## Using this Template
+
+To experiment with this template (until I make it a Nuget, if I do):
+
+### Clone or Fork the Repo
+
+https://github.com/JeffryGonzalez/CritterStackTemplate
+
+### To Install The Template (Don't need to do this for Rider, See Below)
+
+In the cloned repo, go to `JasperFxTemplate/JasperFxTemplate` and run:
+
+```sh
+dotnet new install ./
+```
+
+If you run `dotnet new critterapi --help` you should see:
+
+```
+Template options:
+  -da, --databaseName <databaseName>  Name of the database to connect to
+                                      Type: string
+                                      Default: critterstackdb
+  -e, --exportOtel                    Export Open Telemetry Data
+                                      Type: bool
+                                      Default: true
+  -p, --postgresPort <postgresPort>   Port to expose Postgres from Docker Compose
+                                      Type: string
+                                      Default: 5432
+  -ad, --adminer                      Add Adminer to Docker Compose
+                                      Type: bool
+                                      Default: true
+  -p:d, --dashboard                   Add the Aspire Dashboard to the Docker Compose
+                                      Type: bool
+                                      Default: true
+  -c, --compose                       Create a Docker Compose File
+                                      Type: bool
+                                      Default: true
+```
+
+These are pretty self-explanatory, but need some work.
+
+If you've installed this template, it should be available from the dotnet CLI to add a new project (example):
+
+```
+dotnet new critterapi -n GetmeStartedApi -p 5433 -ad false
+```
+
+This will create a new project with the name GetmeStartedApi, exposing (in the docker-compose.yml file) Postgres on port 5433 (and add that to the
+connection string in the `appsettings.development.json`), and *not* add Adminer to the docker compose file.
+
+This template can be used in Rider and Visual Studio. I've tested both on Linux (Pop_OS (Ubuntu) with Rider) and Windows (With Visual Studio and Rider),
+I have not tested on a Mac yet, as I keep my Mac hidden lest someone think of me as a hipster or, worse, a designer. I will test it out, but if someone does first, let me know.
 
 
 ## Goal
@@ -19,7 +72,7 @@ Most of the meat of this is in `CritterStackExtensions.cs`.
 With this, the `Program.cs` just needs a couple of lines to get started.
 
 ```csharp
-builder.UseCritterStackWithReasonableDefaults();
+builder.AddCritterStackWebHost("ConnectionString");
 ```
 
 And then, after the app is built,
@@ -29,7 +82,6 @@ app.MapWolverineEndpoint();
 await app.RunOaktonCommands(args);
 ```
 
-I don't want any kind of "reference app", so the `Todos` stuff will go before I make this a template.
 
 Some of the things in the extension method:
 
