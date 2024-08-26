@@ -11,8 +11,8 @@ services:
       - ./db/:/docker-entrypoint-initdb.d/
     ports:
       - "5432:PG_PORT"
-
-#if (includeAdminer == "true")
+      # Added
+#if (adminer)
   adminer:
     image: adminer
     restart: always
@@ -22,7 +22,7 @@ services:
       ADMINER_DESIGN: dracula
 #endif
 
-#if (includeAspireDashboard == "true")
+#if (dashboard)
   dashboard:
     image: mcr.microsoft.com/dotnet/aspire-dashboard
     container_name: aspire-dashboard
