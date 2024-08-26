@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JasperFxTemplate", "JasperFxTemplate\JasperFxTemplate.csproj", "{307F52B8-F9B6-45B3-A543-2D403DB4DF0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JasperFxTemplate.Tests", "JasperFxTemplate.Tests\JasperFxTemplate.Tests.csproj", "{EAF2714B-A1FB-4FE2-AD0F-822853ECC5D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{307F52B8-F9B6-45B3-A543-2D403DB4DF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{307F52B8-F9B6-45B3-A543-2D403DB4DF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{307F52B8-F9B6-45B3-A543-2D403DB4DF0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF2714B-A1FB-4FE2-AD0F-822853ECC5D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF2714B-A1FB-4FE2-AD0F-822853ECC5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF2714B-A1FB-4FE2-AD0F-822853ECC5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF2714B-A1FB-4FE2-AD0F-822853ECC5D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
