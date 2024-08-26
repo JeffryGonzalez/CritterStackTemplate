@@ -30,7 +30,7 @@ public static class JasperFxExtensions
             config.OpenTelemetry.TrackEventCounters();
             config.Connection(connectionString);
             config.AutoCreateSchemaObjects = builder.Environment.IsDevelopment() ?
-                AutoCreate.All 
+                AutoCreate.CreateOrUpdate // The Default
                 : AutoCreate.None; // see https://martendb.io/schema/migrations.html#development-time-with-auto-create-mode
         }).UseLightweightSessions().IntegrateWithWolverine();
         builder.Host.UseWolverine(opts =>
