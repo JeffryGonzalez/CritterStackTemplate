@@ -22,6 +22,12 @@
       "defaultValue": "critterstackdb",
       "replaces": "critterstackdb"
     },
+    "exportOtel": {
+      "type": "parameter",
+      "description": "Export Open Telemetry Data",
+      "datatype": "bool",
+      "defaultValue": "true"
+    },
     "postgresPort": {
       "type": "parameter",
       "description": "Port to expose Postgres from Docker Compose",

@@ -5,7 +5,7 @@ using Wolverine.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.UseCritterStackWebHost("CritterStack");
+builder.AddCritterStackWebHost("CritterStack");
 
 
 var app = builder.Build();

@@ -16,7 +16,7 @@ namespace JasperFxTemplate;
 public static class CritterStackExtensions
 {
     private static string _serviceName = "";
-    public static WebApplicationBuilder UseCritterStackWebHost(this WebApplicationBuilder builder, string connectionStringKey)
+    public static WebApplicationBuilder AddCritterStackWebHost(this WebApplicationBuilder builder, string connectionStringKey)
     {
         builder.Host.ApplyOaktonExtensions();
         var connectionString = builder.Configuration.GetConnectionString(connectionStringKey) ??
@@ -36,13 +36,17 @@ public static class CritterStackExtensions
             opts.Policies.UseDurableInboxOnAllListeners();
             opts.Policies.UseDurableOutboxOnAllSendingEndpoints();
             opts.Policies.AutoApplyTransactions();
-            opts.CodeGeneration.TypeLoadMode = builder.Environment.IsDevelopment() ? 
+            opts.CodeGeneration.TypeLoadMode = builder.Environment.IsDevelopment() ?
                 TypeLoadMode.Dynamic // Can change to TypeLoadMode.Auto if devex gets slow, see https://wolverinefx.io/guide/codegen.html#working-with-code-generation
                 : TypeLoadMode.Static;
             _serviceName = opts.ServiceName;
         }).UseResourceSetupOnStartupInDevelopment();
+#if (exportOtel)
+        builder.ConfigureOpenTelemetry(); 
+#endif
         return builder;
     }
+#if (exportOtel)
     public static IHostApplicationBuilder ConfigureOpenTelemetry(this IHostApplicationBuilder builder)
     {
         builder.Logging.AddOpenTelemetry(logging =>
@@ -75,4 +79,5 @@ public static class CritterStackExtensions
 
         return builder;
     }
+#endif
 }
