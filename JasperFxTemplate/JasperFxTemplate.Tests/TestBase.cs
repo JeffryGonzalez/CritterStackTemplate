@@ -2,8 +2,8 @@ namespace JasperFxTemplate.Tests;
 
 public class TestBase
 {
-    internal static string CodeBaseRoot { get; } = GetCodeBaseRoot();
-    internal static string TestTemplatesLocation { get; } = Path.Combine(CodeBaseRoot);
+    private static string CodeBaseRoot { get; } = GetCodeBaseRoot();
+    private static string TestTemplatesLocation { get; } = Path.Combine(CodeBaseRoot);
     internal static string GetTestTemplateLocation(string templateName)
     {
         string templateLocation = Path.Combine(TestTemplatesLocation, templateName);
@@ -16,8 +16,9 @@ public class TestBase
     }
     private static string GetCodeBaseRoot()
     {
-        string codebase = typeof(TestBase).Assembly.Location;
-        string? codeBaseRoot = new FileInfo(codebase).Directory?.Parent?.Parent?.Parent?.Parent?.FullName;
+        var codebase = typeof(TestBase).Assembly.Location;
+        // Are you my mother?
+        var codeBaseRoot = new FileInfo(codebase).Directory?.Parent?.Parent?.Parent?.Parent?.FullName;
 
         if (string.IsNullOrEmpty(codeBaseRoot))
         {
@@ -27,10 +28,7 @@ public class TestBase
         {
             throw new InvalidOperationException("JasperFxTemplate.sln was not found in codebase root");
         }
-        // if (!Directory.Exists(Path.Combine(codeBaseRoot!, "test", "Microsoft.TemplateEngine.TestTemplates")))
-        // {
-        //     throw new InvalidOperationException("Microsoft.TemplateEngine.TestTemplates was not found in test/");
-        // }
+
         return codeBaseRoot!;
     }
 }

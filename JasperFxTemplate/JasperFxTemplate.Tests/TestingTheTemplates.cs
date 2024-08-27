@@ -22,7 +22,7 @@ public class TestingTheTemplates(ITestOutputHelper output) :TestBase
         
         using var logger  = output.BuildLogger();
         var engine = new VerificationEngine(logger);
-        await engine.Execute(options).ConfigureAwait(false);
+        await engine.Execute(options);
     }
     [Fact]
     public async Task PortAssignment()
@@ -42,6 +42,26 @@ public class TestingTheTemplates(ITestOutputHelper output) :TestBase
         
         using var logger  = output.BuildLogger();
         var engine = new VerificationEngine(logger);
-        await engine.Execute(options).ConfigureAwait(false);
+        await engine.Execute(options);
+    }
+    [Fact]
+    public async Task DatabaseName()
+    {
+        var templatePath = GetTestTemplateLocation("JasperFxTemplate");
+ 
+        var options = new TemplateVerifierOptions("critterapi")
+        {
+            DisableDiffTool = true,
+            TemplatePath = templatePath,
+            ScenarioName = "PortAssignment",
+            TemplateSpecificArgs = new [] { "--databaseName", "killing-time"}
+            
+            
+        };
+        
+        
+        using var logger  = output.BuildLogger();
+        var engine = new VerificationEngine(logger);
+        await engine.Execute(options);
     }
 }

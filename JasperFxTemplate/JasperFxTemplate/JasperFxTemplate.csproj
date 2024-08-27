@@ -8,6 +8,10 @@
 
 
     <ItemGroup>
+        <PackageReference Include="coverlet.collector" Version="6.0.2">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Marten.AspNetCore" Version="7.26.3" />
         <PackageReference Include="Marten.CommandLine" Version="7.26.3" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8"/>
@@ -19,10 +23,10 @@
         <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.9.0" />
         <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.9.0" />
         <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.9.0" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
-        <PackageReference Include="WolverineFx.FluentValidation" Version="2.17.0" />
-        <PackageReference Include="WolverineFx.Http.Marten" Version="2.17.0" />
-        <PackageReference Include="WolverineFx.Marten" Version="2.17.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
+        <PackageReference Include="WolverineFx.Http.FluentValidation" Version="2.17.1" />
+        <PackageReference Include="WolverineFx.Http.Marten" Version="2.17.1" />
+        <PackageReference Include="WolverineFx.Marten" Version="2.17.1" />
     </ItemGroup>
 
 </Project>
