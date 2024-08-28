@@ -2,6 +2,24 @@
 
 The configuration story for the Critter Stack is exemplary. It has every knob and dial a kid could want. However, it is a bit overwhelming in the "file->new project" story for newer developers getting started. 
 
+## Helping with this Project
+
+Right now I have two templates - one for a "Full" CritterStack API Project, and one for a Headless CritterStack service.
+
+In the `JasperFxTemplates/examples` directory are two projects that I generated with the templates.
+
+Fork this repository, and send me issues or PRs with anything you think I've:
+
+- Missed - stuff that would be good for a "getting started" template.
+- Messed Up - Things that should be changed.
+- Don't Need - if there is something you think *shouldn't* be part of a default project, let me know if I should either remove it or put it behind an option.
+
+Also - what *other* templates would be nice?
+
+My plan for right now is to add one more - for an Alba Test project. I'm going to mine the examples and see if I can come up with a good "starter", using XUnit (obv) and some shared context stuff that I have to look up every time I create one.
+
+Another idea is in the at least the `critterapi` template adding an *option* to include some default functionality. Sort of like the ASP.NET API "WeatherForecast", but off by default, and a little more realistic without being too much. Maybe a todo list thing using the Wolverine HTTP Endpoints and a bit of event sourcing. Is this a good idea? I want to keep it far to the left of any kind of "reference app", but might be good for folks to see.
+
 ## Using this Template
 
 To experiment with this template (until I make it a Nuget, if I do):
