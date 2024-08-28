@@ -1,7 +1,7 @@
 using Microsoft.TemplateEngine.Authoring.TemplateVerifier;
 using Xunit.Abstractions;
 
-namespace JasperFxTemplate.Tests;
+namespace JasperFxTemplates.Tests.CritterApi;
 
 public class TestingTheTemplates(ITestOutputHelper output) :TestBase
 {

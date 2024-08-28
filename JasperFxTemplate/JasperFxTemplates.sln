@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CritterApiTemplate", "CritterApiTemplate\CritterApiTemplate.csproj", "{2A499836-6EA8-47F0-8B13-D6BF91655B15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JasperFxTemplates.Tests", "JasperFxTemplates.Tests\JasperFxTemplates.Tests.csproj", "{8A455D16-C5D8-4F7E-877B-247870FD90DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{307F52B8-F9B6-45B3-A543-2D403DB4DF0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307F52B8-F9B6-45B3-A543-2D403DB4DF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{307F52B8-F9B6-45B3-A543-2D403DB4DF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{307F52B8-F9B6-45B3-A543-2D403DB4DF0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF2714B-A1FB-4FE2-AD0F-822853ECC5D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF2714B-A1FB-4FE2-AD0F-822853ECC5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF2714B-A1FB-4FE2-AD0F-822853ECC5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF2714B-A1FB-4FE2-AD0F-822853ECC5D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A499836-6EA8-47F0-8B13-D6BF91655B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A499836-6EA8-47F0-8B13-D6BF91655B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A499836-6EA8-47F0-8B13-D6BF91655B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A499836-6EA8-47F0-8B13-D6BF91655B15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A455D16-C5D8-4F7E-877B-247870FD90DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A455D16-C5D8-4F7E-877B-247870FD90DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A455D16-C5D8-4F7E-877B-247870FD90DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A455D16-C5D8-4F7E-877B-247870FD90DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

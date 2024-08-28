@@ -25,7 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\JasperFxTemplate\JasperFxTemplate.csproj" />
+      <ProjectReference Include="..\CritterApiTemplate\CritterApiTemplate.csproj" />
     </ItemGroup>
 
     <ItemGroup>

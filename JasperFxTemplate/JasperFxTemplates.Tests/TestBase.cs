@@ -1,4 +1,4 @@
-namespace JasperFxTemplate.Tests;
+namespace JasperFxTemplates.Tests;
 
 public class TestBase
 {

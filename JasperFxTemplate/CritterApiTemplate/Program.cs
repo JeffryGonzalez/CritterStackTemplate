@@ -1,5 +1,4 @@
-
-using JasperFxTemplate;
+using CritterApiTemplate;
 using Oakton;
 using Wolverine.Http;
 using Wolverine.Http.FluentValidation;
