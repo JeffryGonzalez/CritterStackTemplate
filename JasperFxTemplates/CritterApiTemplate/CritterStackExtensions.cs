@@ -3,10 +3,12 @@ using Marten;
 using Marten.Services;
 using Oakton;
 using Oakton.Resources;
+using OpenTelemetry;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Trace;
 using Weasel.Core;
 using Wolverine;
 using Wolverine.Marten;
-
 namespace CritterApiTemplate;
 
 public static class CritterStackExtensions
