@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CritterApiTemplate", "CritterApiTemplate\CritterApiTemplate.csproj", "{2A499836-6EA8-47F0-8B13-D6BF91655B15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CritterApiTemplate", "src\templates\CritterApiTemplate\CritterApiTemplate.csproj", "{2A499836-6EA8-47F0-8B13-D6BF91655B15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JasperFxTemplates.Tests", "JasperFxTemplates.Tests\JasperFxTemplates.Tests.csproj", "{8A455D16-C5D8-4F7E-877B-247870FD90DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JasperFxTemplates.Tests", "src\JasperFxTemplates.Tests\JasperFxTemplates.Tests.csproj", "{8A455D16-C5D8-4F7E-877B-247870FD90DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CritterHeadlessTemplate", "CritterHeadlessTemplate\CritterHeadlessTemplate.csproj", "{341BAA81-B322-4F20-80B3-3A65DE06073C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CritterHeadlessTemplate", "src\templates\CritterHeadlessTemplate\CritterHeadlessTemplate.csproj", "{1810D43B-044A-4422-A2BA-9A51E75ACB08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,9 +28,9 @@ Global
 		{8A455D16-C5D8-4F7E-877B-247870FD90DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A455D16-C5D8-4F7E-877B-247870FD90DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A455D16-C5D8-4F7E-877B-247870FD90DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{341BAA81-B322-4F20-80B3-3A65DE06073C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{341BAA81-B322-4F20-80B3-3A65DE06073C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{341BAA81-B322-4F20-80B3-3A65DE06073C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{341BAA81-B322-4F20-80B3-3A65DE06073C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1810D43B-044A-4422-A2BA-9A51E75ACB08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1810D43B-044A-4422-A2BA-9A51E75ACB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1810D43B-044A-4422-A2BA-9A51E75ACB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1810D43B-044A-4422-A2BA-9A51E75ACB08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -9,7 +9,7 @@
   "identity": "JasperFx.CritterStackHeadless",
   "name": "JasperFx Critterstack Headless",
   "shortName": "critterheadless",
-  "groupIdentity": "JasperFx.CritterStack",
+  "groupIdentity": "JasperFx.CritterStack.Headless",
   "preferNameDirectory": true,
   "sourceName": "CritterHeadlessTemplate",
   "tags": {

@@ -18,7 +18,7 @@ public class TestBase
     {
         var codebase = typeof(TestBase).Assembly.Location;
         // Are you my mother?
-        var codeBaseRoot = new FileInfo(codebase).Directory?.Parent?.Parent?.Parent?.Parent?.FullName;
+        var codeBaseRoot = new FileInfo(codebase).Directory?.Parent?.Parent?.Parent?.Parent?.Parent?.FullName;
 
         if (string.IsNullOrEmpty(codeBaseRoot))
         {
@@ -29,6 +29,6 @@ public class TestBase
             throw new InvalidOperationException("JasperFxTemplates.sln was not found in codebase root");
         }
 
-        return codeBaseRoot!;
+        return Path.Combine(codeBaseRoot, "src", "templates");
     }
 }

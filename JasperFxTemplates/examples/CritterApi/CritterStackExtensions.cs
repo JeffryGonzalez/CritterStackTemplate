@@ -1,4 +1,4 @@
-﻿using JasperFx.CodeGeneration;
+using JasperFx.CodeGeneration;
 using Marten;
 using Marten.Services;
 using Oakton;
@@ -9,7 +9,7 @@ using OpenTelemetry.Trace;
 using Weasel.Core;
 using Wolverine;
 using Wolverine.Marten;
-namespace Empty;
+namespace CritterApi;
 
 public static class CritterStackExtensions
 {

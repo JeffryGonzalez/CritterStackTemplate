@@ -8,7 +8,7 @@
   ],
   "identity": "JeffryGonzalez.CritterStackWebApi",
   "name": "JasperFx Full Stack Web API",
-  "groupIdentity": "JasperFx.CritterStack",
+  "groupIdentity": "JasperFx.CritterStack.Api",
   "shortName": "critterapi",
   "preferNameDirectory": true,
   "sourceName": "CritterApiTemplate",
