@@ -71,6 +71,10 @@ If you've installed this template, it should be available from the dotnet CLI to
 dotnet new critterapi -n GetmeStartedApi -p 5433 -ad false
 ```
 
+These will also show up in Rider and Visual Studio (Visual Studio Pic Coming Soon):
+
+![media/rider.png](media/rider.png)
+
 This will create a new project with the name GetmeStartedApi, exposing (in the docker-compose.yml file) Postgres on port 5433 (and add that to the
 connection string in the `appsettings.development.json`), and *not* add Adminer to the docker compose file.
 
@@ -83,7 +87,7 @@ I have not tested on a Mac yet, as I keep my Mac hidden lest someone think of me
 I'd love to have a project template I could install for students in my class getting started with this. It might also be useful for others. So, ultimately something like:
 
 ```sh
-dotnet new install CritterStackStarter
+dotnet new install JasperFx.Templates
 ```
 
 Or something like that. I'm a bit inspired (believe it or not) by the Aspire approach for the `ServiceDefaults` - which is have some code in the project that sets up the basic stuff, but make it just code - and obvious that you own it and can tweak it, etc.
