@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Jeff Gonzalez",
+  "classifications": [
+    "Common",
+    "Wolverine",
+    "JasperFx"
+  ],
+  "identity": "JasperFx.CritterStackHeadless",
+  "name": "JasperFx Critterstack Headless",
+  "shortName": "critterheadless",
+  "groupIdentity": "JasperFx.CritterStack",
+  "preferNameDirectory": true,
+  "sourceName": "CritterHeadlessTemplate",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {},
+  "sources": [],
+  "primaryOutputs": [
+    {
+      "path": "CritterHeadlessTemplate.csproj"
+    }
+  ],
+  "postActions": [
+    {
+      "manualInstructions": [
+        {
+          "text": "Run `dotnet restore`"
+        }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}
