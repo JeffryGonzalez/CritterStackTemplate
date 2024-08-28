@@ -6,19 +6,40 @@ The configuration story for the Critter Stack is exemplary. It has every knob an
 
 To experiment with this template (until I make it a Nuget, if I do):
 
-### Clone or Fork the Repo
 
-https://github.com/JeffryGonzalez/CritterStackTemplate
+### To Install The Template
 
-### To Install The Template (Don't need to do this for Rider, See Below)
+If you just want to experiment, you can just clone this repository, or you can fork it and clone your copy locally if you are going to contribute.
 
-In the cloned repo, go to `JasperFxTemplate/JasperFxTemplate` and run:
+Go into the `JasperFxTemplates/src` directory and run `dotnet pack`.
+
+Type `dotnet new install bin/Release/JasperFx.Templates.0.0.1-beta.1.nupkg` to install the template.
+
+![media/clone.gif](media/clone.gif)
+
+
+To see the new templates, you can run:
 
 ```sh
-dotnet new install ./
+dotnet new list jasperfx
 ```
 
-If you run `dotnet new critterapi --help` you should see:
+**Note:** The `jasperfx` at the end just limits the list to those templates with that tag. Leave it off to see all your templates.
+
+You can see the options for any template by appending the `--help` after `dotnet new TEMPLATENAME --help`
+
+![media/list-help.gif](media/list-help.gif)
+
+
+To uninstall the templates (you should do this whenever a new version is released. After it is on NuGet you can just update it) run:
+
+```sh
+dotnet new uninstall JasperFx.Templates
+```
+
+They should no longer appear when you run `dotnet new list`.
+
+
 
 ```
 Template options:
