@@ -10,7 +10,7 @@
   "name": "JasperFx Full Stack Web API",
   "shortName": "critterapi",
   "preferNameDirectory": true,
-  "sourceName": "JasperFxTemplate",
+  "sourceName": "CritterApiTemplate",
   "tags": {
     "language": "C#",
     "type": "project"
@@ -70,7 +70,7 @@
   ],
   "primaryOutputs": [
     {
-      "path": "JasperFxTemplate.csproj"
+      "path": "CritterApiTemplate.csproj"
     }
   ],
   "postActions": [

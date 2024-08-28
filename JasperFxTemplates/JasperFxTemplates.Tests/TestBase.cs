@@ -24,9 +24,9 @@ public class TestBase
         {
             throw new InvalidOperationException("The codebase root was not found");
         }
-        if (!File.Exists(Path.Combine(codeBaseRoot!, "JasperFxTemplate.sln")))
+        if (!File.Exists(Path.Combine(codeBaseRoot!, "JasperFxTemplates.sln")))
         {
-            throw new InvalidOperationException("JasperFxTemplate.sln was not found in codebase root");
+            throw new InvalidOperationException("JasperFxTemplates.sln was not found in codebase root");
         }
 
         return codeBaseRoot!;

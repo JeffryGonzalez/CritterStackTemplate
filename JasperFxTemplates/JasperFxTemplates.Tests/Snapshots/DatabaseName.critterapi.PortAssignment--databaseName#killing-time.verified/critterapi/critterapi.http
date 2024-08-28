@@ -1,6 +1,0 @@
-@critterapi_HostAddress = http://localhost:5118
-
-GET {{critterapi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

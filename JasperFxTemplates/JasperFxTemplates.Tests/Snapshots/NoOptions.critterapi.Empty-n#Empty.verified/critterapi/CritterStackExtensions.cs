@@ -1,17 +1,13 @@
-﻿using System.Collections.Immutable;
-using JasperFx.CodeGeneration;
+﻿using JasperFx.CodeGeneration;
 using Marten;
 using Marten.Services;
 using Oakton;
 using Oakton.Resources;
-using OpenTelemetry;
-using OpenTelemetry.Metrics;
-using OpenTelemetry.Trace;
 using Weasel.Core;
 using Wolverine;
 using Wolverine.Marten;
 
-namespace critterapi;
+namespace Empty;
 
 public static class CritterStackExtensions
 {

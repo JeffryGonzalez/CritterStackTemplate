@@ -1,22 +1,23 @@
 using Microsoft.TemplateEngine.Authoring.TemplateVerifier;
 using Xunit.Abstractions;
 
-namespace JasperFxTemplates.Tests.CritterApi;
+namespace JasperFxTemplates.Tests;
 
-public class TestingTheTemplates(ITestOutputHelper output) :TestBase
+public class CritterApiTemplateTests(ITestOutputHelper output) :TestBase
 {
     [Fact]
     public async Task NoOptions()
     {
         
-        var templatePath = GetTestTemplateLocation("JasperFxTemplate");
+        var templatePath = GetTestTemplateLocation("CritterApiTemplate");
         var options = new TemplateVerifierOptions("critterapi")
         {
             DisableDiffTool = true,
             TemplatePath = templatePath,
-            ScenarioName = "Empty"
-            
-            
+            ScenarioName = "Empty",
+            TemplateSpecificArgs = ["-n" ,"Empty"]
+
+
         };
         
         
@@ -27,16 +28,16 @@ public class TestingTheTemplates(ITestOutputHelper output) :TestBase
     [Fact]
     public async Task PortAssignment()
     {
-        var templatePath = GetTestTemplateLocation("JasperFxTemplate");
+        var templatePath = GetTestTemplateLocation("CritterApiTemplate");
  
         var options = new TemplateVerifierOptions("critterapi")
         {
             DisableDiffTool = true,
             TemplatePath = templatePath,
             ScenarioName = "PortAssignment",
-            TemplateSpecificArgs = new [] { "--postgresPort", "9999"}
-            
-            
+            TemplateSpecificArgs = ["-n", "PortAssignment", "--postgresPort", "9999"]
+
+
         };
         
         
@@ -47,16 +48,16 @@ public class TestingTheTemplates(ITestOutputHelper output) :TestBase
     [Fact]
     public async Task DatabaseName()
     {
-        var templatePath = GetTestTemplateLocation("JasperFxTemplate");
+        var templatePath = GetTestTemplateLocation("CritterApiTemplate");
  
         var options = new TemplateVerifierOptions("critterapi")
         {
             DisableDiffTool = true,
             TemplatePath = templatePath,
             ScenarioName = "PortAssignment",
-            TemplateSpecificArgs = new [] { "--databaseName", "killing-time"}
-            
-            
+            TemplateSpecificArgs = ["-n", "DatabaseName", "--databaseName", "killing-time"]
+
+
         };
         
         

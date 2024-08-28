@@ -30,14 +30,17 @@
 
     <ItemGroup>
       <Compile Remove="Snapshots\**" />
+      <Compile Remove="CritterApi\Snapshots\**" />
     </ItemGroup>
 
     <ItemGroup>
       <EmbeddedResource Remove="Snapshots\**" />
+      <EmbeddedResource Remove="CritterApi\Snapshots\**" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="Snapshots\**" />
+      <None Remove="CritterApi\Snapshots\**" />
     </ItemGroup>
 
 </Project>
