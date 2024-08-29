@@ -14,4 +14,4 @@ app.MapWolverineEndpoints(opts =>
     opts.UseFluentValidationProblemDetailMiddleware();
 });
 
-await app.RunOaktonCommands(args);
+return await app.RunOaktonCommands(args);
